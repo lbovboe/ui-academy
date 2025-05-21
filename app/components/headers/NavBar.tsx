@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import Chip from '../tools/animation/Chip';
+import Chip from '../tools/Animation1/Chip';
 import Link from 'next/link';
 import ThemeToggle from '../tools/ThemeToggle';
 import Image from 'next/image';
