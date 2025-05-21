@@ -36,5 +36,5 @@ yarn-error.log*
 next-env.d.ts
 
 # PWA service worker and Workbox files
-/sw.js
-/workbox-*.js
+**/sw.js
+**/workbox-*.js
