@@ -14,40 +14,40 @@ export const viewport: Viewport = {
   // Theme color will be handled by ThemeMetadata component
 };
 
-// Define metadata for the application
+// Define metadata for the documentation site
 export const metadata: Metadata = {
-  metadataBase: new URL('https://novel-xiaoshuo.vercel.app/'),
-  title: '最爱小说网',
-  description: '最爱小说网',
+  metadataBase: new URL('https://ui-academy-docs.vercel.app/'),
+  title: 'UI Academy Docs',
+  description:
+    'Documentation, code snippets, and live demos for UI Academy components. Copy and use UI code instantly in your projects.',
   manifest: '/manifest.json',
-  applicationName: '最爱小说网',
+  applicationName: 'UI Academy Docs',
   appleWebApp: {
     capable: true,
-    // Status bar style will be managed dynamically by ThemeMetadata
-    title: '最爱小说网',
+    title: 'UI Academy Docs',
   },
   formatDetection: {
     telephone: false,
   },
   openGraph: {
     type: 'website',
-    title: '最爱小说网',
-    siteName: '最爱小说网',
-    description: '最爱小说网提供免费全本小说给大众网友, 资源来源各个网友上传',
-    url: 'https://novel-xiaoshuo.vercel.app/',
-    locale: 'zh_CN',
+    title: 'UI Academy Docs',
+    siteName: 'UI Academy Docs',
+    description: 'Comprehensive documentation and code demos for UI Academy components. Copy, paste, and build faster.',
+    url: 'https://ui-academy-docs.vercel.app/',
+    locale: 'en_US',
     images: [
       {
         url: '/icons/opengraph-image.png',
         width: 1200,
         height: 630,
-        alt: 'Ace Coding Academy',
+        alt: 'UI Academy Docs',
       },
     ],
   },
   icons: {
     icon: [
-      { url: "/icons/favicon.ico", sizes: "any" , type :"image/x-icon"},
+      { url: '/icons/favicon.ico', sizes: 'any', type: 'image/x-icon' },
       { url: '/icons/icon-192x192.png', sizes: '192x192', type: 'image/png' },
       { url: '/icons/icon-512x512.png', sizes: '512x512', type: 'image/png' },
     ],
@@ -81,6 +81,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           - dark:from-dark-background-gradient-start
           - dark:via-dark-background-gradient-via
           - dark:to-dark-background-gradient-end
+        - Consider adding a sidebar for docs navigation in the future
       */}
       <body className="from-light-background-gradient-start via-light-background-gradient-via to-light-background-gradient-end dark:from-dark-background-gradient-start dark:via-dark-background-gradient-via dark:to-dark-background-gradient-end flex min-h-screen flex-col bg-linear-to-br">
         <ThemeProvider>

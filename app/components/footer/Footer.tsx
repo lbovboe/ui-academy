@@ -6,7 +6,7 @@ const Footer = () => {
       - bg-light/dark-paper: Theme-based background color
       - border-t: Top border for visual separation
     */
-    <footer className="mt-auto border-t border-solid border-light-border bg-light-paper/30 py-6 dark:border-dark-border dark:bg-dark-paper/30">
+    <footer className="border-light-border bg-light-paper/30 dark:border-dark-border dark:bg-dark-paper/30 mt-auto border-t border-solid py-6">
       {/* 
         Container for content:
         - container: Sets max-width and centers content
@@ -14,39 +14,42 @@ const Footer = () => {
         - px-4: Adds horizontal padding
       */}
       <div className="container mx-auto px-4">
-        {/* Disclaimer at top */}
+        {/* Top: Project description */}
         <div className="mb-2 text-center">
-          <p className="text-sm text-light-text-secondary dark:text-dark-text-secondary">
-            最爱小说阅读网所有小说作品均来自网友上传或转载于其他网站，版权属于原创作者。如侵犯了您的权利，请与本站联系，本站将立刻删除。
+          <p className="text-light-text-secondary dark:text-dark-text-secondary text-sm">
+            UI Academy Docs provides ready-to-use UI component documentation, code snippets, and live demos. Copy,
+            paste, and build beautiful apps faster.
           </p>
         </div>
 
         {/* Bottom footer with copyright and links */}
         <div className="flex flex-col items-center justify-center md:flex-row">
           <div className="mt-3 flex flex-wrap justify-center gap-4 text-sm md:mt-0">
-            <div className="text-center text-sm text-light-text-secondary dark:text-dark-text-secondary">
-              Copyright © {new Date().getFullYear()} 最爱小说网 版权所有 All Rights Reserved.
+            <div className="text-light-text-secondary dark:text-dark-text-secondary text-center text-sm">
+              Copyright © {new Date().getFullYear()} UI Academy Docs. All Rights Reserved.
             </div>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="/privacy"
-                className="text-light-text-secondary transition-colors hover:text-light-primary dark:text-dark-text-secondary dark:hover:text-dark-primary"
+                href="https://github.com/ui-academy/ui-academy-docs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-light-text-secondary hover:text-light-primary dark:text-dark-text-secondary dark:hover:text-dark-primary transition-colors"
               >
-                隐私政策
+                GitHub
               </a>
               <span>|</span>
               <a
-                href="/terms"
-                className="text-light-text-secondary transition-colors hover:text-light-primary dark:text-dark-text-secondary dark:hover:text-dark-primary"
+                href="/license"
+                className="text-light-text-secondary hover:text-light-primary dark:text-dark-text-secondary dark:hover:text-dark-primary transition-colors"
               >
-                服务条款
+                License
               </a>
               <span>|</span>
               <a
-                href="/disclaimer"
-                className="text-light-text-secondary transition-colors hover:text-light-primary dark:text-dark-text-secondary dark:hover:text-dark-primary"
+                href="/feedback"
+                className="text-light-text-secondary hover:text-light-primary dark:text-dark-text-secondary dark:hover:text-dark-primary transition-colors"
               >
-                免责声明
+                Feedback
               </a>
             </div>
           </div>
