@@ -12,8 +12,9 @@ export const generateStaticParams = async () => {
   return components.map((comp) => ({ component: comp.slug }));
 };
 
-export const generateMetadata = async ({ params }: { params: { component: string } }): Promise<Metadata> => {
-  const comp = components.find((c) => c.slug === params.component);
+export const generateMetadata = async ({ params }: { params: Promise<{ component: string }> }): Promise<Metadata> => {
+  const { component } = await params;
+  const comp = components.find((c) => c.slug === component);
   if (!comp) return { title: 'Component Not Found - UI Academy Docs' };
   return {
     title: `${comp.name} Component - UI Academy Docs`,
@@ -21,8 +22,9 @@ export const generateMetadata = async ({ params }: { params: { component: string
   };
 };
 
-const ComponentPage = async ({ params }: { params: { component: string } }) => {
-  const comp = components.find((c) => c.slug === params.component);
+const ComponentPage = async ({ params }: { params: Promise<{ component: string }> }) => {
+  const { component } = await params;
+  const comp = components.find((c) => c.slug === component);
   if (!comp) return notFound();
 
   return (
