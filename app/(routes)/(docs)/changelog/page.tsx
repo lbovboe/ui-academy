@@ -8,11 +8,11 @@ export const metadata: Metadata = {
 const Changelog = async () => {
   return (
     <main className="mx-auto max-w-2xl px-4 py-12">
-      <h1 className="mb-4 text-3xl font-bold text-[oklch(65%_0.15_250)]">Changelog</h1>
-      <p className="mb-6 text-lg text-[oklch(40%_0_0)]">
+      <h1 className="text-light-primary dark:text-dark-primary mb-4 text-3xl font-bold">Changelog</h1>
+      <p className="text-light-text-secondary dark:text-dark-text-secondary mb-6 text-lg">
         Stay up to date with the latest changes and improvements to UI Academy components.
       </p>
-      <div className="rounded bg-[oklch(97%_0_0)] p-4 text-sm text-[oklch(40%_0_0)]">
+      <div className="bg-light-background text-light-text-secondary dark:bg-dark-background dark:text-dark-text-secondary rounded p-4 text-sm">
         <p>v1.0.0 - Initial release 🎉</p>
         {/* Add more release notes here */}
       </div>

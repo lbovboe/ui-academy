@@ -17,8 +17,8 @@ const Components = async () => {
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-12">
-      <h1 className="mb-4 text-3xl font-bold text-[oklch(65%_0.15_250)]">Components</h1>
-      <p className="mb-6 text-lg text-[oklch(40%_0_0)]">
+      <h1 className="text-light-primary dark:text-dark-primary mb-4 text-3xl font-bold">Components</h1>
+      <p className="text-light-text-secondary dark:text-dark-text-secondary mb-6 text-lg">
         Browse all available UI components. Click a component to view its documentation, code snippets, and live demo.
       </p>
       <ul className="space-y-4">
@@ -26,7 +26,7 @@ const Components = async () => {
           <li key={comp.name}>
             <Link
               href={comp.href}
-              className="text-xl text-[oklch(65%_0.15_250)] underline hover:text-[oklch(70%_0.15_250)]"
+              className="text-light-primary dark:text-dark-primary hover:text-light-secondary dark:hover:text-dark-secondary text-xl underline"
             >
               {comp.name}
             </Link>

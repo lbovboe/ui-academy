@@ -3,37 +3,37 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-light-background: oklch(98.6% 0.01 230.5);
+  --color-light-background: oklch(98% 0.03 220); /* sky blue + white */
 
-  --color-light-background-gradient-start: oklch(98.5% 0.02 220.5);
-  --color-light-background-gradient-via: oklch(96.5% 0.03 220.5);
-  --color-light-background-gradient-end: oklch(92.5% 0.05 220.5);
+  --color-light-background-gradient-start: oklch(98% 0.04 220);
+  --color-light-background-gradient-via: oklch(96% 0.06 220);
+  --color-light-background-gradient-end: oklch(92% 0.08 220);
 
-  --color-light-paper: oklch(92.5% 0.05 220.5);
-  --color-light-primary: oklch(75.5% 0.19 230.5);
-  --color-light-secondary: oklch(77.5% 0.18 190.5);
+  --color-light-paper: oklch(95% 0.06 220);
+  --color-light-primary: oklch(85% 0.15 220); /* sky blue */
+  --color-light-secondary: oklch(90% 0.10 200); /* lighter blue */
 
-  --color-light-text-primary: oklch(32.5% 0.05 260.5);
-  --color-light-text-secondary: oklch(60.5% 0.03 260.5);
-  --color-light-text-disabled: oklch(80.5% 0.02 260.5);
+  --color-light-text-primary: oklch(20% 0.01 260); /* almost black for text */
+  --color-light-text-secondary: oklch(50% 0.01 260);
+  --color-light-text-disabled: oklch(80% 0.01 260);
 
-  --color-light-border: oklch(92.5% 0.01 260.5);
+  --color-light-border: oklch(90% 0.01 220);
 
-  --color-dark-background: oklch(32.5% 0.05 270.5);
+  --color-dark-background: oklch(20% 0.01 260); /* not so black, softened black */
 
-  --color-dark-background-gradient-start: oklch(40.5% 0.08 270.5);
-  --color-dark-background-gradient-via: oklch(60.5% 0.15 300.5);
-  --color-dark-background-gradient-end: oklch(40.5% 0.12 300.5);
+  --color-dark-background-gradient-start: oklch(25% 0.01 260);
+  --color-dark-background-gradient-via: oklch(30% 0.01 260);
+  --color-dark-background-gradient-end: oklch(22% 0.01 260);
 
-  --color-dark-paper: oklch(40.5% 0.08 270.5);
-  --color-dark-primary: oklch(80.5% 0.15 300.5);
-  --color-dark-secondary: oklch(85.5% 0.18 320.5);
+  --color-dark-paper: oklch(22% 0.01 260);
+  --color-dark-primary: oklch(70% 0.01 260); /* light accent */
+  --color-dark-secondary: oklch(60% 0.01 260); /* muted accent */
 
-  --color-dark-text-primary: oklch(98.5% 0.01 270.5);
-  --color-dark-text-secondary: oklch(90.5% 0.05 300.5);
-  --color-dark-text-disabled: oklch(70.5% 0.12 300.5);
+  --color-dark-text-primary: oklch(98% 0.01 260); /* near white */
+  --color-dark-text-secondary: oklch(80% 0.01 260);
+  --color-dark-text-disabled: oklch(60% 0.01 260);
 
-  --color-dark-border: oklch(40.5% 0.12 300.5);
+  --color-dark-border: oklch(40% 0.01 260);
 }
 
 /*
