@@ -1,0 +1,11 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Icon Usage
+
+- Use React Icons for all icons.
+- If a required icon is not available, use an alternative icon library and document the choice.
+- Import only the icons you use, not entire icon sets.
+- Place icon components in the relevant component or a shared `icons` directory if reused.

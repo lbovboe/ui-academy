@@ -1,0 +1,15 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# TypeScript Standards
+
+- Use TypeScript for all code except configuration files that require JavaScript.
+- Always type function parameters and return values explicitly.
+- Prefer interfaces for public APIs and types for internal or utility types.
+- Avoid using `any`; use unknown or proper types instead.
+- Use enums sparingly; prefer union types for limited sets of values.
+- Enable `strict` mode in `tsconfig.json`.
+- Use type inference where appropriate, but be explicit for exported functions and hooks.
+- Use arrow functions for all function declarations in TypeScript. Do not use `export default function` or function declarations for components, hooks, or utilities. Always use the arrow function style with explicit types.

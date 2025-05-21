@@ -1,0 +1,56 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-light-background: oklch(98.6% 0.01 230.5);
+
+  --color-light-background-gradient-start: oklch(98.5% 0.02 220.5);
+  --color-light-background-gradient-via: oklch(96.5% 0.03 220.5);
+  --color-light-background-gradient-end: oklch(92.5% 0.05 220.5);
+
+  --color-light-paper: oklch(92.5% 0.05 220.5);
+  --color-light-primary: oklch(75.5% 0.19 230.5);
+  --color-light-secondary: oklch(77.5% 0.18 190.5);
+
+  --color-light-text-primary: oklch(32.5% 0.05 260.5);
+  --color-light-text-secondary: oklch(60.5% 0.03 260.5);
+  --color-light-text-disabled: oklch(80.5% 0.02 260.5);
+
+  --color-light-border: oklch(92.5% 0.01 260.5);
+
+  --color-dark-background: oklch(32.5% 0.05 270.5);
+
+  --color-dark-background-gradient-start: oklch(40.5% 0.08 270.5);
+  --color-dark-background-gradient-via: oklch(60.5% 0.15 300.5);
+  --color-dark-background-gradient-end: oklch(40.5% 0.12 300.5);
+
+  --color-dark-paper: oklch(40.5% 0.08 270.5);
+  --color-dark-primary: oklch(80.5% 0.15 300.5);
+  --color-dark-secondary: oklch(85.5% 0.18 320.5);
+
+  --color-dark-text-primary: oklch(98.5% 0.01 270.5);
+  --color-dark-text-secondary: oklch(90.5% 0.05 300.5);
+  --color-dark-text-disabled: oklch(70.5% 0.12 300.5);
+
+  --color-dark-border: oklch(40.5% 0.12 300.5);
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+

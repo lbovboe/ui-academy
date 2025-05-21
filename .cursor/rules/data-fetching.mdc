@@ -1,0 +1,13 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Data Fetching with TanStack Query
+
+- Use TanStack Query (React Query) for all client-side data fetching.
+- Encapsulate query logic in custom hooks (e.g., `useUserData`).
+- Use query keys that are descriptive and unique.
+- Handle loading, error, and success states in the UI.
+- Use mutations for POST/PUT/DELETE requests.
+- Avoid direct fetch calls in components; always use hooks.

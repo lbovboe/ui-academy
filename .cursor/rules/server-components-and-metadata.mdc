@@ -1,0 +1,49 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Server Components and Metadata for Pages
+
+## Rule: All Pages Must Be Server Components
+- Every file in any `app/**/page.tsx` or `app/**/page.ts` **must** be a [server component](mdc:next-js-theme-template-v4/https:/nextjs.org/docs/app/building-your-application/rendering/server-components).
+- Do **not** use `"use client"` in any page file.
+
+## Rule: Use Next.js `MetaData` for SEO
+- Every page must export a `metadata` object or a `generateMetadata` function using [Next.js Metadata API](mdc:next-js-theme-template-v4/https:/nextjs.org/docs/app/api-reference/functions/generate-metadata).
+- Use the `MetaData` type from `next` for all metadata.
+- Metadata must be relevant and unique for each page.
+
+## Rule: Dynamic Routes Must Be Statically Generated
+- For any dynamic route (e.g., `app/posts/[slug]/page.tsx`), you **must**:
+  - Export a `generateStaticParams` function to generate all valid paths at build time.
+  - Export a `generateMetadata` function to provide metadata for each dynamic path.
+  - Do **not** use runtime dynamic rendering for pages; all dynamic routes must be statically generated.
+
+## Rule: Data Fetching
+- All data fetching in pages must be done via:
+  - Custom hooks (from `app/hooks` or `app/(routes)/**/hooks`), **or**
+  - Functions imported from the `lib` directory (e.g., `app/lib/`), which fetch directly from the database or external APIs.
+- Do **not** fetch data directly in the page file except via these hooks or lib functions.
+
+## Example Structure
+```ts
+// app/posts/[slug]/page.tsx
+import { getPostBySlug } from '@/app/lib/posts';
+import type { MetaData } from 'next';
+
+export const generateStaticParams = async () => {
+  // ...
+};
+
+export const generateMetadata = async ({ params }): Promise<MetaData> => {
+  // ...
+};
+
+const Page = async ({ params }) => {
+  const post = await getPostBySlug(params.slug);
+  // ...
+};
+
+export default Page;
+```

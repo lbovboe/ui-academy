@@ -1,0 +1,12 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Custom Hooks Guidelines
+
+- Prefix all custom hooks with `use` (e.g., `useTheme`, `useUserData`).
+- Place hooks in a `hooks` or relevant feature directory.
+- Keep hooks focused on a single responsibility.
+- Type all hook parameters and return values.
+- Reuse hooks across components where possible.

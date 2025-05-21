@@ -1,0 +1,13 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# File and Folder Naming Conventions
+
+- Use kebab-case for all folders and all files except React component files.
+- Use PascalCase for React component files only (e.g., `NavBar.tsx`).
+- Component folders/directories must use kebab-case (e.g., `headers`, `footer`).
+- Use lowercase for utility and hook files (e.g., `use-theme.ts`).
+- Name context files as `SomethingContext.tsx`.
+- Name page files as `page.tsx` within their route directory.

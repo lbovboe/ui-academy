@@ -1,0 +1,11 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Context Organization
+
+- Place all context providers in a `context` directory or relevant feature folder.
+- Name context files as `SomethingContext.tsx`.
+- Export both the context and a custom hook for consuming the context (e.g., `useTheme`).
+- Keep context logic focused and avoid large, monolithic providers.

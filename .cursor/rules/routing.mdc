@@ -1,0 +1,30 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Routing Guidelines
+
+- Use Next.js route groups to organize all routes under a top-level `(routes)` group directory.
+- For each route, assign a category using a nested route group. Example categories: `(marketing)`, `(features)`, `(auth)`, `(dashboard)`, `(home)`, etc.
+- Each group can contain multiple pages and subfolders. For example:
+  - **Marketing group:**
+    - `app/(routes)/(marketing)/about/page.tsx` (About page)
+    - `app/(routes)/(marketing)/faq/page.tsx` (FAQ page)
+    - `app/(routes)/(marketing)/contact/page.tsx` (Contact page)
+    - `app/(routes)/(marketing)/team/page.tsx` (Team page)
+  - **Features group:**
+    - `app/(routes)/(features)/feature-a/page.tsx` (Feature A page)
+    - `app/(routes)/(features)/feature-b/page.tsx` (Feature B page)
+    - `app/(routes)/(features)/feature-c/page.tsx` (Feature C page)
+  - **Auth group:**
+    - `app/(routes)/(auth)/login/page.tsx` (Login page)
+    - `app/(routes)/(auth)/register/page.tsx` (Register page)
+    - `app/(routes)/(auth)/forgot-password/page.tsx` (Forgot Password page)
+  - **Other groups:**
+    - `app/(routes)/(home)/page.tsx` (Home page)
+    
+- Place all route files (`page.tsx`, `layout.tsx`, etc.) within their respective category group.
+- Use descriptive and consistent category names for route groups.
+- Keep shared layouts or components for a category within the same group folder.
+- Avoid placing routes directly under `app/`; always use the `(routes)` group as the entry point for all routes.

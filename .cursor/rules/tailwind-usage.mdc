@@ -1,0 +1,14 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Tailwind CSS v4 Usage
+
+- Use Tailwind CSS v4 utility classes for all styling.
+- Do not use custom CSS unless absolutely necessary; prefer Tailwind utilities.
+- Use `@apply` only for complex or repeated utility sets in CSS files.
+- Do not use deprecated or v3-only Tailwind classes.
+- Use semantic class names for custom classes.
+- Keep all global styles in `app/globals.css`.
+- **All colors must use the oklch format that suits Tailwind CSS v4. Do not use hex codes or other color types.**

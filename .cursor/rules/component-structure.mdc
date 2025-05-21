@@ -1,0 +1,14 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Component Structure Rules
+
+- Use PascalCase for all component file and directory names (e.g., `NavBar.tsx`, `ThemeToggle.tsx`).
+- Place each component in its own directory if it has related files (styles, tests, subcomponents).
+- Group related components under feature or domain folders (e.g., `app/components/Headers/`).
+- Export components as default unless there is a strong reason to use named exports.
+- Keep components focused: one component per file, unless tightly coupled.
+- Use `.tsx` for all React components.
+- Place shared UI components in a `components` directory, and feature-specific components in their respective feature folders.
