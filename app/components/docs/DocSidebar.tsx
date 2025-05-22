@@ -38,22 +38,6 @@ const navItems: NavItem[] = [
   },
   {
     label: {
-      en: 'User Guide',
-      zh: '用户指南',
-    },
-    href: '/docs/user-guide',
-    icon: <FaTools className="text-doc_icon-light dark:text-doc_icon-dark" />,
-  },
-  {
-    label: {
-      en: 'Features',
-      zh: '功能特性',
-    },
-    href: '/docs/features',
-    icon: <FaCogs className="text-doc_icon-light dark:text-doc_icon-dark" />,
-  },
-  {
-    label: {
       en: 'Context',
       zh: '上下文',
     },
@@ -96,15 +80,7 @@ const navItems: NavItem[] = [
       },
     ],
   },
-
-  {
-    label: {
-      en: 'Development',
-      zh: '开发指南',
-    },
-    href: '/docs/development',
-    icon: <FaCode className="text-doc_icon-light dark:text-doc_icon-dark" />,
-  },
+ 
 ];
 
 export default function DocSidebar() {
