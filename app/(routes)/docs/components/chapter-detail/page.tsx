@@ -277,23 +277,23 @@ export default function ComponentsPage() {
   return (
     <DocsWrapper>
       <DocLayout title={content.title} description={content.description}>
-        {/* <DocSection title={content.sections.overview.title} delay={0}>
+        <DocSection title={content.sections.overview.title} delay={0}>
           <p className="text-doc_text-secondary_light dark:text-doc_text-secondary_dark mb-4">
             {content.sections.overview.description}
           </p>
-        </DocSection> */}
+        </DocSection>
 
-        {/* <DocSection title={content.sections.props.title} delay={1}>
+        <DocSection title={content.sections.props.title} delay={1}>
           <DocList items={content.sections.props.items} />
-        </DocSection> */}
+        </DocSection>
 
         <DocSection title={content.sections.features.title} delay={2}>
           <DocList type="number" items={content.sections.features.items} />
         </DocSection>
-{/* 
+
         <DocSection title={content.sections.notes.title} delay={3}>
           <DocList items={content.sections.notes.items} />
-        </DocSection> */}
+        </DocSection>
       </DocLayout>
     </DocsWrapper>
   );
