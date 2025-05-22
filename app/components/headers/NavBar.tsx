@@ -5,7 +5,11 @@ import Link from 'next/link';
 import ThemeToggle from '../tools/ThemeToggle';
 import Image from 'next/image';
 
-const navItems = [{ text: 'Home', href: '/' }];
+const navItems = [
+  { text: 'Home', href: '/' },
+  { text: 'Docs', href: '/docs' },
+  { text: 'UI Components', href: '/docs/components' },
+];
 
 const Navbar = () => {
   const [selected, setSelected] = useState(navItems[0].text);
