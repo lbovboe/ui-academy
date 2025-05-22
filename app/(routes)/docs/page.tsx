@@ -4,7 +4,6 @@ import { FaBook, FaTools, FaCogs, FaCode } from 'react-icons/fa';
 import DocsWrapper from '@/app/components/docs/DocsWrapper';
 import DocLayout from '@/app/components/docs/DocLayout';
 import DocFeatureCard from '@/app/components/docs/DocFeatureCard';
-import KeyFeatures from '@/app/components/docs/KeyFeatures';
 import { useLanguage } from '@/app/components/docs/LanguageContext';
 
 // Documentation sections with both English and Chinese content
@@ -15,23 +14,35 @@ const sections = [
       zh: 'UI 组件',
     },
     description: {
-      en: 'Documentation of UI components',
-      zh: 'UI 组件文档',
+      en: 'Pre-built, customizable React components with usage examples and code snippets.',
+      zh: '预构建的可自定义 React 组件，包含用法示例和代码片段。',
     },
     href: '/docs/components',
     icon: FaCode,
   },
   {
     title: {
-      en: 'Context',
-      zh: '上下文',
+      en: 'Context Providers',
+      zh: '上下文提供者',
     },
     description: {
-      en: 'Documentation of context providers and usage',
-      zh: '上下文提供者和用法文档',
+      en: 'Ready-to-use React context providers for common application needs, fully typed with TypeScript.',
+      zh: '用于常见应用需求的可直接使用的 React 上下文提供者，完全使用 TypeScript 类型。',
     },
     href: '/docs/context',
     icon: FaCogs,
+  },
+  {
+    title: {
+      en: 'Utility Functions',
+      zh: '工具函数',
+    },
+    description: {
+      en: 'Helper functions and custom hooks for common development tasks, fully typed and reusable.',
+      zh: '用于常见开发任务的辅助函数和自定义 Hook，完全类型化且可复用。',
+    },
+    href: '/docs/utilities',
+    icon: FaTools,
   },
 ];
 
@@ -43,8 +54,8 @@ export default function DocsPage() {
     title: language === 'en' ? 'Documentation' : '文档',
     description:
       language === 'en'
-        ? 'Novel Xiaoshuo is a web application for scraping, formatting, and reading Chinese novels. It provides a clean interface for reading novels and supports various features like text formatting, chapter navigation, and more.'
-        : '最爱小说网是一个用于抓取、格式化和阅读中文小说的网络应用程序。它提供了一个清晰的阅读界面，并支持各种功能，如文本格式化、章节导航等。',
+        ? 'This site provides comprehensive documentation for a reusable React component library, including pre-built UI components, context providers, and utility functions. All resources are fully typed with TypeScript and styled with Tailwind CSS to accelerate development and ensure consistency across projects.'
+        : '本网站为可复用的 React 组件库提供全面文档，包括预构建的 UI 组件、上下文提供者和工具函数。所有资源均采用 TypeScript 完全类型化，并使用 Tailwind CSS 样式，助力项目开发提速并保持一致性。',
     keyFeatures: language === 'en' ? 'Key Features' : '主要功能',
     docSections: language === 'en' ? 'Documentation Sections' : '文档部分',
   };
