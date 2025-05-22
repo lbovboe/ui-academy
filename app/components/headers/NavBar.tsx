@@ -5,13 +5,7 @@ import Link from 'next/link';
 import ThemeToggle from '../tools/ThemeToggle';
 import Image from 'next/image';
 
-const navItems = [
-  { text: 'Home', href: '/' },
-  { text: 'Getting Started', href: '/getting-started' },
-  { text: 'Components', href: '/components' },
-  { text: 'Changelog', href: '/changelog' },
-  { text: 'About', href: '/about' },
-];
+const navItems = [{ text: 'Home', href: '/' }];
 
 const Navbar = () => {
   const [selected, setSelected] = useState(navItems[0].text);
@@ -20,7 +14,6 @@ const Navbar = () => {
     <div className="bg-light-paper/30 dark:bg-dark-paper/30 w-full px-6 py-4">
       <div className="mx-auto flex max-w-7xl items-center justify-between">
         <Image src="/icons/icon-72x72.png" alt="UI Academy Docs Logo" width={40} height={40} />
-
         <div className="flex items-center gap-2">
           {navItems.map((item) => (
             <Link href={item.href} key={item.text}>

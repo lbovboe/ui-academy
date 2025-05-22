@@ -82,11 +82,16 @@ export default function DocList({ items, type = 'icon', delay = 0 }: DocListProp
                   </div>
                 </div>
               </div>
-              <div className="text-doc_text-secondary_light dark:text-doc_text-secondary_dark  w-full min-w-0">{item.description}</div>
+              <div className="text-doc_text-secondary_light dark:text-doc_text-secondary_dark w-full min-w-0">
+                {item.description}
+              </div>
             </div>
-            <div className="text-doc_text-secondary_light dark:text-doc_text-secondary_dark w-full min-w-0">
-              {item.codeBlock ? <div className="mt-2">{item.codeBlock}</div> : null}
-            </div>
+
+            {item.codeBlock ? (
+              <div className="text-doc_text-secondary_light dark:text-doc_text-secondary_dark w-full min-w-0">
+                {item.codeBlock}
+              </div>
+            ) : null}
           </m.div>
         );
       })}
