@@ -80,7 +80,50 @@ const navItems: NavItem[] = [
       },
     ],
   },
- 
+  {
+    label: {
+      en: 'Hooks',
+      zh: '自定义 Hook',
+    },
+    href: '/docs/hooks',
+    icon: <FaCode className="text-doc_icon-light dark:text-doc_icon-dark" />,
+    more: [
+      {
+        label: {
+          en: 'useTheme',
+          zh: 'useTheme',
+        },
+        href: '/docs/hooks/use-theme',
+        icon: <FaCode className="text-doc_icon-light dark:text-doc_icon-dark" />,
+      },
+    ],
+  },
+  {
+    label: {
+      en: 'Utility Functions',
+      zh: '工具函数',
+    },
+    href: '/docs/utilities',
+    icon: <FaTools className="text-doc_icon-light dark:text-doc_icon-dark" />,
+    more: [
+      {
+        label: {
+          en: 'debounce',
+          zh: 'debounce',
+        },
+        href: '/docs/utilities/debounce',
+        icon: <FaTools className="text-doc_icon-light dark:text-doc_icon-dark" />,
+      },
+      {
+        label: {
+          en: 'formatDate',
+          zh: 'formatDate',
+        },
+        href: '/docs/utilities/format-date',
+        icon: <FaTools className="text-doc_icon-light dark:text-doc_icon-dark" />,
+      },
+    ],
+  },
 ];
 
 export default function DocSidebar() {
@@ -126,10 +169,10 @@ export default function DocSidebar() {
   return (
     <>
       {/* Mobile menu button */}
-      <div className="fixed bottom-4 right-4 z-50 md:hidden">
+      <div className="fixed right-4 bottom-4 z-50 md:hidden">
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="flex h-12 w-12 items-center justify-center rounded-full bg-doc_icon-light text-white shadow-lg transition-all hover:bg-doc_icon-accent_light dark:bg-doc_icon-dark dark:hover:bg-doc_icon-accent_dark"
+          className="bg-doc_icon-light hover:bg-doc_icon-accent_light dark:bg-doc_icon-dark dark:hover:bg-doc_icon-accent_dark flex h-12 w-12 items-center justify-center rounded-full text-white shadow-lg transition-all"
           aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
         >
           {isMobileMenuOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
@@ -140,12 +183,12 @@ export default function DocSidebar() {
       <div className="hidden w-64 shrink-0 md:block">
         <div className="sticky top-24 overflow-y-auto pr-4">
           <div className="mb-4 flex items-center justify-between">
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-doc_text-muted_light dark:text-doc_text-muted_dark">
+            <h3 className="text-doc_text-muted_light dark:text-doc_text-muted_dark text-sm font-semibold tracking-wider uppercase">
               {docLabel}
             </h3>
             <button
               onClick={toggleLanguage}
-              className="flex items-center text-sm font-medium text-doc_icon-light hover:text-doc_icon-accent_light dark:text-doc_icon-dark dark:hover:text-doc_icon-accent_dark"
+              className="text-doc_icon-light hover:text-doc_icon-accent_light dark:text-doc_icon-dark dark:hover:text-doc_icon-accent_dark flex items-center text-sm font-medium"
               aria-label="Toggle language"
             >
               <FaGlobe size={16} className="mr-1" />
@@ -169,7 +212,7 @@ export default function DocSidebar() {
                   {item.more && (
                     <button
                       onClick={() => toggleExpand(item.href)}
-                      className="ml-2 text-doc_icon-light focus:outline-none dark:text-doc_icon-dark"
+                      className="text-doc_icon-light dark:text-doc_icon-dark ml-2 focus:outline-none"
                       aria-label={expanded[item.href] ? 'Collapse' : 'Expand'}
                     >
                       {expanded[item.href] ? <FaChevronDown size={14} /> : <FaChevronRight size={14} />}
@@ -177,7 +220,7 @@ export default function DocSidebar() {
                   )}
                 </div>
                 {item.more && expanded[item.href] && (
-                  <div className="ml-4 mt-1 space-y-1">
+                  <div className="mt-1 ml-4 space-y-1">
                     {item.more.map((subItem) => (
                       <Link
                         key={subItem.href}
@@ -205,23 +248,23 @@ export default function DocSidebar() {
         initial={{ x: '100%' }}
         animate={{ x: isMobileMenuOpen ? 0 : '100%' }}
         transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-        className="fixed inset-y-0 right-0 z-40 w-64 bg-doc_bg-light p-4 shadow-xl dark:bg-doc_bg-dark md:hidden"
+        className="bg-doc_bg-light dark:bg-doc_bg-dark fixed inset-y-0 right-0 z-40 w-64 p-4 shadow-xl md:hidden"
       >
         <div className="mb-6 flex items-center justify-between">
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-doc_text-muted_light dark:text-doc_text-muted_dark">
+          <h3 className="text-doc_text-muted_light dark:text-doc_text-muted_dark text-sm font-semibold tracking-wider uppercase">
             {docLabel}
           </h3>
           <div className="flex items-center gap-2">
             <button
               onClick={toggleLanguage}
-              className="flex items-center rounded-full p-2 text-sm font-medium text-doc_icon-light hover:text-doc_icon-accent_light dark:text-doc_icon-dark dark:hover:text-doc_icon-accent_dark"
+              className="text-doc_icon-light hover:text-doc_icon-accent_light dark:text-doc_icon-dark dark:hover:text-doc_icon-accent_dark flex items-center rounded-full p-2 text-sm font-medium"
               aria-label="Toggle language"
             >
               <FaGlobe size={16} />
             </button>
             <button
               onClick={() => setIsMobileMenuOpen(false)}
-              className="rounded-full p-2 text-doc_text-body_light hover:bg-doc_bg-paper_light dark:text-doc_text-body_dark dark:hover:bg-doc_bg-paper_dark"
+              className="text-doc_text-body_light hover:bg-doc_bg-paper_light dark:text-doc_text-body_dark dark:hover:bg-doc_bg-paper_dark rounded-full p-2"
               aria-label="Close menu"
             >
               <FaTimes size={18} />
@@ -245,7 +288,7 @@ export default function DocSidebar() {
                 {item.more && (
                   <button
                     onClick={() => toggleExpand(item.href)}
-                    className="ml-2 text-doc_icon-light focus:outline-none dark:text-doc_icon-dark"
+                    className="text-doc_icon-light dark:text-doc_icon-dark ml-2 focus:outline-none"
                     aria-label={expanded[item.href] ? 'Collapse' : 'Expand'}
                   >
                     {expanded[item.href] ? <FaChevronDown size={14} /> : <FaChevronRight size={14} />}
@@ -253,7 +296,7 @@ export default function DocSidebar() {
                 )}
               </div>
               {item.more && expanded[item.href] && (
-                <div className="ml-8 mt-1 space-y-1">
+                <div className="mt-1 ml-8 space-y-1">
                   {item.more.map((subItem) => (
                     <Link
                       key={subItem.href}
