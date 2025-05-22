@@ -32,7 +32,7 @@ const DocCodeBlock: React.FC<CodeBlockProps> = ({
   return (
     <div className={`relative ${className} mt-4`}>
       {showCopyButton && (
-        <div className="absolute right-2 top-2 z-10 flex items-center gap-2">
+        <div className="absolute top-2 right-2 z-10 flex items-center gap-2">
           <button
             className="rounded-md bg-gray-700/70 p-1.5 text-gray-300 transition-colors hover:bg-gray-700"
             onClick={handleCopyCode}
@@ -52,28 +52,25 @@ const DocCodeBlock: React.FC<CodeBlockProps> = ({
           </button>
         </div>
       )}
-      <div className="code-container overflow-x-auto rounded-lg">
-        <style jsx global>{`
-          .code-container pre {
-            margin: 0 !important;
-            border-radius: 0.5rem !important;
-            background: #111827 !important;
-          }
 
-          .code-container code {
-            font-family: Menlo, Monaco, Consolas, 'Courier New', monospace !important;
-            font-size: 0.9rem !important;
-            white-space: pre !important;
-            word-wrap: normal !important;
-            tab-size: 2 !important;
+      {/* Container Query tailwind v4 */}
+      <div className="@container overflow-x-auto rounded-lg">
+        {/* 
+        
+          CSS container queries prevent pre and code tags from overflowing the parent container.
+          .code-container {
+            container-type: inline-size;
+            width: 100%;
           }
+        container-type: inline-size
+        * Creates containment context: Child elements can now query this container's size
+        * Breaks size dependency: Container size is no longer determined by child content width
+        * Enables responsive behavior: Children adapt to container, not the other way around
+          
+        
+        Tailwind use @container
+        */}
 
-          @media (max-width: 640px) {
-            .code-container code {
-              font-size: 0.85rem !important;
-            }
-          }
-        `}</style>
         <SyntaxHighlighter
           language={language}
           style={vscDarkPlus}
