@@ -72,10 +72,10 @@ const navItems: NavItem[] = [
     more: [
       {
         label: {
-          en: 'Chapter Detail ',
-          zh: '章节内容组件',
+          en: 'Basic Buttons',
+          zh: '基础按钮',
         },
-        href: '/docs/components/chapter-detail',
+        href: '/docs/components/basic-buttons',
         icon: <FaCode className="text-doc_icon-light dark:text-doc_icon-dark" />,
       },
     ],

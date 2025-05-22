@@ -20,14 +20,11 @@ export default function ButtonDocPage() {
     {
       key: 'primary',
       title: language === 'en' ? 'Primary Button' : '主按钮',
-      code: `<button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-5 rounded-lg shadow transition-colors cursor-pointer">
+      code: `<button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-5 rounded-lg  transition-colors cursor-pointer">
   {language === 'en' ? 'Primary' : '主按钮'}
 </button>`,
       button: (
-        <button
-          className="cursor-pointer rounded-lg bg-blue-600 px-5 py-2 font-semibold text-white shadow transition-colors hover:bg-blue-700"
-          onClick={() => alert(language === 'en' ? 'Primary Clicked!' : '点击了主按钮！')}
-        >
+        <button className="cursor-pointer rounded-lg bg-blue-600 px-5 py-2 font-semibold text-white transition-colors hover:bg-blue-700">
           {language === 'en' ? 'Primary' : '主按钮'}
         </button>
       ),
@@ -39,10 +36,7 @@ export default function ButtonDocPage() {
   {language === 'en' ? 'Outline' : '描边按钮'}
 </button>`,
       button: (
-        <button
-          className="cursor-pointer rounded-lg border-2 border-blue-600 px-5 py-2 font-semibold text-blue-600 transition-colors hover:bg-blue-50 dark:hover:bg-blue-900/20"
-          onClick={() => alert(language === 'en' ? 'Outline Clicked!' : '点击了描边按钮！')}
-        >
+        <button className="cursor-pointer rounded-lg border-2 border-blue-600 px-5 py-2 font-semibold text-blue-600 transition-colors hover:bg-blue-50 dark:hover:bg-blue-900/20">
           {language === 'en' ? 'Outline' : '描边按钮'}
         </button>
       ),
@@ -54,10 +48,7 @@ export default function ButtonDocPage() {
   {language === 'en' ? 'Ghost' : '幽灵按钮'}
 </button>`,
       button: (
-        <button
-          className="cursor-pointer rounded-lg border border-transparent bg-transparent px-5 py-2 font-semibold text-blue-600 transition-colors hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20"
-          onClick={() => alert(language === 'en' ? 'Ghost Clicked!' : '点击了幽灵按钮！')}
-        >
+        <button className="cursor-pointer rounded-lg border border-transparent bg-transparent px-5 py-2 font-semibold text-blue-600 transition-colors hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20">
           {language === 'en' ? 'Ghost' : '幽灵按钮'}
         </button>
       ),
@@ -65,12 +56,12 @@ export default function ButtonDocPage() {
     {
       key: 'icon',
       title: language === 'en' ? 'Icon Button' : '图标按钮',
-      code: `<button className="bg-pink-600 hover:bg-pink-700 text-white p-3 rounded-full shadow transition-colors cursor-pointer">
+      code: `<button className="bg-pink-600 hover:bg-pink-700 text-white p-3 rounded-full  transition-colors cursor-pointer">
   <FaHeart />
 </button>`,
       button: (
         <button
-          className="cursor-pointer rounded-full bg-pink-600 p-3 text-white shadow transition-colors hover:bg-pink-700"
+          className="cursor-pointer rounded-full bg-pink-600 p-3 text-white transition-colors hover:bg-pink-700"
           aria-label={language === 'en' ? 'Like' : '喜欢'}
         >
           <FaHeart />
@@ -85,7 +76,7 @@ export default function ButtonDocPage() {
   {language === 'en' ? 'Success' : '成功'}
 </button>`,
       button: (
-        <button className="flex cursor-pointer items-center gap-2 rounded-lg bg-green-600 px-5 py-2 font-semibold text-white shadow transition-colors hover:bg-green-700">
+        <button className="flex cursor-pointer items-center gap-2 rounded-lg bg-green-600 px-5 py-2 font-semibold text-white transition-colors hover:bg-green-700">
           <FaCheck />
           {language === 'en' ? 'Success' : '成功'}
         </button>
@@ -99,7 +90,7 @@ export default function ButtonDocPage() {
   <FaArrowRight />
 </button>`,
       button: (
-        <button className="flex cursor-pointer items-center gap-2 rounded-lg bg-purple-600 px-5 py-2 font-semibold text-white shadow transition-colors hover:bg-purple-700">
+        <button className="flex cursor-pointer items-center gap-2 rounded-lg bg-purple-600 px-5 py-2 font-semibold text-white transition-colors hover:bg-purple-700">
           {language === 'en' ? 'Next' : '下一步'}
           <FaArrowRight />
         </button>
@@ -108,11 +99,11 @@ export default function ButtonDocPage() {
     {
       key: 'gradient',
       title: language === 'en' ? 'Gradient Button' : '渐变按钮',
-      code: `<button className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:to-pink-600 text-white font-semibold py-2 px-5 rounded-lg shadow transition-all cursor-pointer">
+      code: `<button className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:to-pink-600 text-white font-semibold py-2 px-5 rounded-lg  transition-all cursor-pointer">
   {language === 'en' ? 'Gradient' : '渐变按钮'}
 </button>`,
       button: (
-        <button className="cursor-pointer rounded-lg bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 px-5 py-2 font-semibold text-white shadow transition-all hover:from-blue-600 hover:to-pink-600">
+        <button className="cursor-pointer rounded-lg bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 px-5 py-2 font-semibold text-white transition-all hover:from-blue-600 hover:to-pink-600">
           {language === 'en' ? 'Gradient' : '渐变按钮'}
         </button>
       ),
@@ -126,7 +117,7 @@ export default function ButtonDocPage() {
 </button>`,
       button: (
         <button
-          className="flex cursor-pointer items-center gap-2 rounded-lg bg-blue-600 px-5 py-2 font-semibold text-white shadow transition-colors hover:bg-blue-700 disabled:opacity-60"
+          className="flex cursor-pointer items-center gap-2 rounded-lg bg-blue-600 px-5 py-2 font-semibold text-white transition-colors hover:bg-blue-700 disabled:opacity-60"
           onClick={handleLoadingClick}
           disabled={loading}
         >
@@ -153,11 +144,11 @@ export default function ButtonDocPage() {
     {
       key: 'animated',
       title: language === 'en' ? 'Animated Button' : '动效按钮',
-      code: `<button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-5 rounded-lg shadow transition-transform transform hover:scale-105 cursor-pointer">
+      code: `<button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-5 rounded-lg  transition-transform transform hover:scale-105 cursor-pointer">
   {language === 'en' ? 'Animate' : '动效'}
 </button>`,
       button: (
-        <button className="transform cursor-pointer rounded-lg bg-orange-500 px-5 py-2 font-semibold text-white shadow transition-transform hover:scale-105 hover:bg-orange-600">
+        <button className="transform cursor-pointer rounded-lg bg-orange-500 px-5 py-2 font-semibold text-white transition-transform hover:scale-105 hover:bg-orange-600">
           {language === 'en' ? 'Animate' : '动效'}
         </button>
       ),
