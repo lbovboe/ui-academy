@@ -34,23 +34,40 @@
   --color-dark-text-disabled: oklch(60% 0.01 260);
 
   --color-dark-border: oklch(40% 0.01 260);
-}
 
-/*
-  The default border color has changed to `currentcolor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
+  /* === Documentation-specific color utilities === */
+  /* doc_bg */
+  --color-doc_bg-light: oklch(98.5% 0.015 80); /* #f8f5f1 */
+  --color-doc_bg-dark: oklch(13.5% 0.01 275); /* #1a1a1a */
+  --color-doc_bg-paper_light: oklch(99.2% 0.01 80); /* #fff8eb */
+  --color-doc_bg-paper_dark: oklch(19.5% 0.01 275); /* #2c2c2c */
+  --color-doc_bg-card_light: oklch(99.7% 0.001 80 / 0.5); /* rgba(255,255,255,0.5) */
+  --color-doc_bg-card_dark: oklch(25.5% 0.01 275); /* #3d3d3d */
+  --color-doc_bg-accent_light: oklch(75.5% 0.09 80 / 0.1); /* rgba(140,120,81,0.1) */
+  --color-doc_bg-accent_dark: oklch(77.5% 0.06 80 / 0.2); /* rgba(168,147,126,0.2) */
 
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
-@layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
-  }
+  /* doc_text */
+  --color-doc_text-heading_light: oklch(27.5% 0.02 50); /* #2d2926 */
+  --color-doc_text-heading_dark: oklch(92.5% 0.01 80); /* #e8e6e3 */
+  --color-doc_text-body_light: oklch(27.5% 0.02 50); /* #2d2926 */
+  --color-doc_text-body_dark: oklch(92.5% 0.01 80); /* #e8e6e3 */
+  --color-doc_text-secondary_light: oklch(27.5% 0.02 50 / 0.8); /* rgba(45,41,38,0.8) */
+  --color-doc_text-secondary_dark: oklch(92.5% 0.01 80 / 0.8); /* rgba(232,230,227,0.8) */
+  --color-doc_text-muted_light: oklch(27.5% 0.02 50 / 0.5); /* rgba(45,41,38,0.5) */
+  --color-doc_text-muted_dark: oklch(92.5% 0.01 80 / 0.5); /* rgba(232,230,227,0.5) */
+  --color-doc_text-link_light: oklch(67.5% 0.13 80); /* #8c7851 */
+  --color-doc_text-link_dark: oklch(77.5% 0.06 80); /* #a8937e */
+
+  /* doc_border */
+  --color-doc_border-light: oklch(87.5% 0.03 80); /* #d3c7b9 */
+  --color-doc_border-dark: oklch(25.5% 0.01 275); /* #3d3d3d */
+  --color-doc_border-accent_light: oklch(67.5% 0.13 80); /* #8c7851 */
+  --color-doc_border-accent_dark: oklch(77.5% 0.06 80); /* #a8937e */
+
+  /* doc_icon */
+  --color-doc_icon-light: oklch(67.5% 0.13 80); /* #8c7851 */
+  --color-doc_icon-dark: oklch(77.5% 0.06 80); /* #a8937e */
+  --color-doc_icon-accent_light: oklch(66.5% 0.19 60); /* #b5651d */
+  --color-doc_icon-accent_dark: oklch(62.5% 0.07 250); /* #7e8d9a */
 }
 
