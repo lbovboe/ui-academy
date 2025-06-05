@@ -3,38 +3,40 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-light-background: oklch(98% 0.03 220); /* sky blue + white */
-
-  --color-light-background-gradient-start: oklch(98% 0.04 220);
-  --color-light-background-gradient-via: oklch(96% 0.06 220);
-  --color-light-background-gradient-end: oklch(92% 0.08 220);
-
-  --color-light-paper: oklch(95% 0.06 220);
-  --color-light-primary: oklch(85% 0.15 220); /* sky blue */
-  --color-light-secondary: oklch(90% 0.10 200); /* lighter blue */
-
-  --color-light-text-primary: oklch(20% 0.01 260); /* almost black for text */
-  --color-light-text-secondary: oklch(50% 0.01 260);
-  --color-light-text-disabled: oklch(80% 0.01 260);
-
-  --color-light-border: oklch(90% 0.01 220);
-
+  /* Light mode - Book/Paper theme */
+  --color-light-background: oklch(96% 0.02 80); /* warm cream background */
+  
+  --color-light-background-gradient-start: oklch(97% 0.02 85);
+  --color-light-background-gradient-via: oklch(95% 0.03 80);
+  --color-light-background-gradient-end: oklch(92% 0.04 75);
+  
+  --color-light-paper: oklch(98% 0.01 85); /* off-white paper */
+  --color-light-primary: oklch(65% 0.12 70); /* warm brown primary */
+  --color-light-secondary: oklch(75% 0.08 85); /* soft beige secondary */
+  
+  --color-light-text-primary: oklch(25% 0.02 50); /* dark brown text */
+  --color-light-text-secondary: oklch(45% 0.02 60);
+  --color-light-text-disabled: oklch(70% 0.02 70);
+  
+  --color-light-border: oklch(85% 0.03 80); /* subtle warm border */
+  
+  /* Dark mode - keep existing */
   --color-dark-background: oklch(20% 0.01 260); /* not so black, softened black */
-
+  
   --color-dark-background-gradient-start: oklch(25% 0.01 260);
   --color-dark-background-gradient-via: oklch(30% 0.01 260);
   --color-dark-background-gradient-end: oklch(22% 0.01 260);
-
+  
   --color-dark-paper: oklch(22% 0.01 260);
   --color-dark-primary: oklch(70% 0.01 260); /* light accent */
   --color-dark-secondary: oklch(60% 0.01 260); /* muted accent */
-
+  
   --color-dark-text-primary: oklch(98% 0.01 260); /* near white */
   --color-dark-text-secondary: oklch(80% 0.01 260);
   --color-dark-text-disabled: oklch(60% 0.01 260);
-
+  
   --color-dark-border: oklch(40% 0.01 260);
-
+  
   /* === Documentation-specific color utilities === */
   /* doc_bg */
   --color-doc_bg-light: oklch(98.5% 0.015 80); /* #f8f5f1 */
@@ -45,7 +47,7 @@
   --color-doc_bg-card_dark: oklch(25.5% 0.01 275); /* #3d3d3d */
   --color-doc_bg-accent_light: oklch(75.5% 0.09 80 / 0.1); /* rgba(140,120,81,0.1) */
   --color-doc_bg-accent_dark: oklch(77.5% 0.06 80 / 0.2); /* rgba(168,147,126,0.2) */
-
+  
   /* doc_text */
   --color-doc_text-heading_light: oklch(27.5% 0.02 50); /* #2d2926 */
   --color-doc_text-heading_dark: oklch(92.5% 0.01 80); /* #e8e6e3 */
@@ -57,17 +59,16 @@
   --color-doc_text-muted_dark: oklch(92.5% 0.01 80 / 0.5); /* rgba(232,230,227,0.5) */
   --color-doc_text-link_light: oklch(67.5% 0.13 80); /* #8c7851 */
   --color-doc_text-link_dark: oklch(77.5% 0.06 80); /* #a8937e */
-
+  
   /* doc_border */
   --color-doc_border-light: oklch(87.5% 0.03 80); /* #d3c7b9 */
   --color-doc_border-dark: oklch(25.5% 0.01 275); /* #3d3d3d */
   --color-doc_border-accent_light: oklch(67.5% 0.13 80); /* #8c7851 */
   --color-doc_border-accent_dark: oklch(77.5% 0.06 80); /* #a8937e */
-
+  
   /* doc_icon */
   --color-doc_icon-light: oklch(67.5% 0.13 80); /* #8c7851 */
   --color-doc_icon-dark: oklch(77.5% 0.06 80); /* #a8937e */
   --color-doc_icon-accent_light: oklch(66.5% 0.19 60); /* #b5651d */
   --color-doc_icon-accent_dark: oklch(62.5% 0.07 250); /* #7e8d9a */
 }
-
