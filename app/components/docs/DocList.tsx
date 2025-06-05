@@ -13,7 +13,6 @@ type DocListProps = {
 };
 
 export default function DocList({ items, type = 'icon', delay = 0 }: DocListProps) {
-  console.log('🚀 ~ DocList ~ items:', items);
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
