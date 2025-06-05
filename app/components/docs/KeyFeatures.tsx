@@ -49,7 +49,7 @@ export default function KeyFeatures({ features, delay = 0 }: KeyFeaturesProps) {
         return (
           <m.div
             key={index}
-            className="group relative overflow-hidden rounded-xl bg-white/60 p-4 shadow-sm backdrop-blur-sm transition hover:shadow-md dark:bg-black/20"
+            className="group relative overflow-hidden rounded-xl bg-doc_bg-accent_light/60 p-4 shadow-sm backdrop-blur-sm transition hover:shadow-md dark:bg-black/20"
             variants={itemVariants}
           >
             <div className="flex items-start gap-4">

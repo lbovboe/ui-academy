@@ -201,7 +201,7 @@ export default function DocSidebar() {
                   className={`group flex items-center rounded-lg px-3 py-2 text-base font-medium transition-colors ${
                     pathname === item.href
                       ? 'bg-doc_bg-accent_light text-doc_text-link_light dark:bg-doc_bg-accent_dark dark:text-doc_text-link_dark'
-                      : 'text-doc_text-body_light hover:bg-doc_bg-paper_light dark:text-doc_text-body_dark dark:hover:bg-doc_bg-paper_dark'
+                      : 'text-doc_text-body_light hover:bg-doc_bg-accent_light dark:text-doc_text-body_dark dark:hover:bg-doc_bg-paper_dark'
                   }`}
                 >
                   <span className="mr-3">{item.icon}</span>
@@ -227,7 +227,7 @@ export default function DocSidebar() {
                         className={`group flex items-center rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
                           pathname === subItem.href
                             ? 'bg-doc_bg-accent_light text-doc_text-link_light dark:bg-doc_bg-accent_dark dark:text-doc_text-link_dark'
-                            : 'text-doc_text-body_light hover:bg-doc_bg-paper_light dark:text-doc_text-body_dark dark:hover:bg-doc_bg-paper_dark'
+                            : 'text-doc_text-body_light hover:bg-doc_bg-accent_light dark:text-doc_text-body_dark dark:hover:bg-doc_bg-paper_dark'
                         }`}
                       >
                         <span className="mr-3">{subItem.icon}</span>
@@ -263,7 +263,7 @@ export default function DocSidebar() {
             </button>
             <button
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-doc_text-body_light hover:bg-doc_bg-paper_light dark:text-doc_text-body_dark dark:hover:bg-doc_bg-paper_dark rounded-full p-2"
+              className="text-doc_text-body_light hover:bg-doc_bg-accent_light dark:text-doc_text-body_dark dark:hover:bg-doc_bg-paper_dark rounded-full p-2"
               aria-label="Close menu"
             >
               <FaTimes size={18} />
@@ -277,7 +277,7 @@ export default function DocSidebar() {
                 className={`group flex items-center rounded-lg px-3 py-2 text-base font-medium transition-colors ${
                   pathname === item.href
                     ? 'bg-doc_bg-accent_light text-doc_text-link_light dark:bg-doc_bg-accent_dark dark:text-doc_text-link_dark'
-                    : 'text-doc_text-body_light hover:bg-doc_bg-paper_light dark:text-doc_text-body_dark dark:hover:bg-doc_bg-paper_dark'
+                    : 'text-doc_text-body_light hover:bg-doc_bg-accent_light dark:text-doc_text-body_dark dark:hover:bg-doc_bg-paper_dark'
                 }`}
               >
                 <span className="mr-3">{item.icon}</span>
@@ -304,7 +304,7 @@ export default function DocSidebar() {
                       className={`group flex items-center rounded-lg px-3 py-2 text-base font-medium transition-colors ${
                         pathname === subItem.href
                           ? 'bg-doc_bg-accent_light text-doc_text-link_light dark:bg-doc_bg-accent_dark dark:text-doc_text-link_dark'
-                          : 'text-doc_text-body_light hover:bg-doc_bg-paper_light dark:text-doc_text-body_dark dark:hover:bg-doc_bg-paper_dark'
+                          : 'text-doc_text-body_light hover:bg-doc_bg-accent_light dark:text-doc_text-body_dark dark:hover:bg-doc_bg-paper_dark'
                       }`}
                     >
                       <span className="mr-3">{subItem.icon}</span>
