@@ -2,8 +2,8 @@ import type { Metadata, Viewport } from 'next';
 import { ThemeProvider } from '@/app/context/ThemeContext';
 import './globals.css';
 
-import Footer from '@/app/components/footer/Footer';
-import Navbar from '@/app/components/headers/NavBar';
+import FooterWrapper from '@/app/components/footer/FooterWrapper';
+import HeaderWrapper from '@/app/components/headers/HeaderWrapper';
 import PWARegister from '@/app/pwa';
 // Define viewport for the application
 export const viewport: Viewport = {
@@ -85,9 +85,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       */}
       <body className="from-light-background-gradient-start via-light-background-gradient-via to-light-background-gradient-end dark:from-dark-background-gradient-start dark:via-dark-background-gradient-via dark:to-dark-background-gradient-end text-light-text-primary dark:text-dark-text-primary flex min-h-screen flex-col bg-linear-to-br">
         <ThemeProvider>
-          <Navbar />
+          <HeaderWrapper />
           <main className="grow">{children}</main>
-          <Footer />
+          <FooterWrapper />
           <PWARegister />
         </ThemeProvider>
       </body>
