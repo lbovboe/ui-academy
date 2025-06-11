@@ -15,7 +15,7 @@ const Navbar = () => {
   const [selected, setSelected] = useState(navItems[0].text);
   // For docs, we don't need to track selected nav item
   return (
-    <div className="bg-light-paper/30 dark:bg-dark-paper/30 w-full px-6 py-4 sticky top-0 z-50">
+    <div className="fixed bg-light-paper/30 dark:bg-dark-paper/30 w-full px-6 py-4 top-0 z-50">
       <div className="mx-auto flex max-w-7xl items-center justify-between">
         <Image src="/icons/icon-72x72.png" alt="UI Academy Docs Logo" width={40} height={40} />
         <div className="flex items-center gap-2">

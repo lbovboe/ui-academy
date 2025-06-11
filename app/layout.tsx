@@ -83,7 +83,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           - dark:to-dark-background-gradient-end
         - Consider adding a sidebar for docs navigation in the future
       */}
-      <body className="from-light-background-gradient-start via-light-background-gradient-via to-light-background-gradient-end dark:from-dark-background-gradient-start dark:via-dark-background-gradient-via dark:to-dark-background-gradient-end text-light-text-primary dark:text-dark-text-primary flex min-h-screen flex-col bg-linear-to-br">
+      <body className="mt-[60px] from-light-background-gradient-start via-light-background-gradient-via to-light-background-gradient-end dark:from-dark-background-gradient-start dark:via-dark-background-gradient-via dark:to-dark-background-gradient-end text-light-text-primary dark:text-dark-text-primary flex min-h-screen flex-col bg-linear-to-br">
         <ThemeProvider>
           <HeaderWrapper />
           <main className="grow">{children}</main>
