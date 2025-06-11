@@ -9,7 +9,7 @@ if (!fs.existsSync(iconsDir)) {
 }
 
 // Source image - can be changed to any high quality image you have
-const sourceImage = path.join(__dirname, '../images/logo.png');
+const sourceImage = path.join(__dirname, 'ui-academy.png');
 
 // Icon sizes needed for PWA
 const sizes = [72, 96, 128, 144, 152, 192, 384, 512];
