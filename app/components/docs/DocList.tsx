@@ -30,19 +30,6 @@ export default function DocList({ items, type = 'icon', delay = 0 }: DocListProp
     visible: { opacity: 1, x: 0, transition: { duration: 0.4 } },
   };
 
-  // Array of color gradients for icons
-  const iconColors = [
-    'from-blue-500 to-purple-500',
-    'from-green-500 to-teal-500',
-    'from-orange-500 to-red-500',
-    'from-pink-500 to-purple-500',
-    'from-indigo-500 to-blue-500',
-    'from-yellow-500 to-amber-500',
-    'from-red-500 to-pink-500',
-    'from-purple-500 to-indigo-500',
-    'from-teal-500 to-cyan-500',
-  ];
-
   return (
     <m.div
       className="relative space-y-8 md:space-y-2.5"
@@ -51,7 +38,6 @@ export default function DocList({ items, type = 'icon', delay = 0 }: DocListProp
       variants={containerVariants}
     >
       {items.map((item, index) => {
-        const gradientColor = iconColors[index % iconColors.length];
         const number = index + 1;
 
         return (
@@ -63,16 +49,10 @@ export default function DocList({ items, type = 'icon', delay = 0 }: DocListProp
             <div className="flex items-center gap-4">
               <div className={`relative flex-shrink-0 ${type === 'number' ? 'hidden md:block' : ''}`}>
                 <div
-                  className={`absolute -inset-1 rounded-full bg-gradient-to-br ${gradientColor} opacity-75 blur-sm transition-all duration-300 group-hover:opacity-100 group-hover:blur-md`}
-                ></div>
-                <div
                   className={`relative flex ${type === 'number' ? 'h-4 w-4' : 'h-2 w-2'} bg-doc_bg-light dark:bg-doc_bg-dark items-center justify-center rounded-full`}
                 >
                   <div className="relative">
-                    <FaCircle
-                      size={type === 'number' ? 8 : 4}
-                      className={`bg-gradient-to-br bg-clip-text text-transparent ${gradientColor}`}
-                    />
+                    <FaCircle size={8} />
                     {type === 'number' && (
                       <div className="text-doc_text-secondary_light dark:text-doc_text-secondary_dark absolute inset-0 flex items-center justify-center text-sm">
                         {number}
