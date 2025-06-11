@@ -94,6 +94,14 @@ const navItems: NavItem[] = [
         href: '/docs/components/nav-bars',
         icon: <FaCode className="text-doc_icon-light dark:text-doc_icon-dark" />,
       },
+      {
+        label: {
+          en: 'Footers',
+          zh: '页脚',
+        },
+        href: '/docs/components/footers',
+        icon: <FaCode className="text-doc_icon-light dark:text-doc_icon-dark" />,
+      },
     ],
   },
   {
