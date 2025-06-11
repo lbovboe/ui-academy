@@ -42,9 +42,275 @@ export default function FootersDocPage() {
 
   const demos = [
     {
+      key: 'simple-centered-footer',
+      title: language === 'en' ? 'Simple Centered Footer' : '简单居中页脚',
+      code: `<footer className="w-full bg-white border-t border-gray-200 py-8">
+  <div className="max-w-6xl mx-auto px-4">
+    <div className="text-center">
+      <p className="text-gray-600 mb-4">
+        &copy; 2024 Company Name. All rights reserved.
+      </p>
+      <div className="flex justify-center space-x-6">
+        <a href="#" className="text-gray-500 hover:text-gray-700 transition-colors">
+          Privacy Policy
+        </a>
+        <a href="#" className="text-gray-500 hover:text-gray-700 transition-colors">
+          Terms of Service
+        </a>
+        <a href="#" className="text-gray-500 hover:text-gray-700 transition-colors">
+          Contact
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>`,
+      component: (
+        <footer className="w-full border-t border-gray-200 bg-white py-8">
+          <div className="mx-auto max-w-6xl px-4">
+            <div className="text-center">
+              <p className="mb-4 text-gray-600">
+                &copy; 2024 {language === 'en' ? 'Company Name. All rights reserved.' : '公司名称。保留所有权利。'}
+              </p>
+              <div className="flex justify-center space-x-6">
+                <a href="#" className="text-gray-500 transition-colors hover:text-gray-700">
+                  {language === 'en' ? 'Privacy Policy' : '隐私政策'}
+                </a>
+                <a href="#" className="text-gray-500 transition-colors hover:text-gray-700">
+                  {language === 'en' ? 'Terms of Service' : '服务条款'}
+                </a>
+                <a href="#" className="text-gray-500 transition-colors hover:text-gray-700">
+                  {language === 'en' ? 'Contact' : '联系我们'}
+                </a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      ),
+    },
+    {
+      key: 'simple-social-footer',
+      title: language === 'en' ? 'Simple Social Footer' : '简单社交页脚',
+      code: `<footer className="w-full bg-white py-8">
+  <div className="max-w-6xl mx-auto px-4">
+    <div className="flex flex-col md:flex-row justify-between items-center">
+      <div className="mb-4 md:mb-0">
+        <h3 className="text-lg font-semibold text-gray-800 mb-2">Your Brand</h3>
+        <p className="text-gray-600">&copy; 2024 All rights reserved.</p>
+      </div>
+      <div className="flex space-x-4">
+        <FaTwitter className="text-gray-500 hover:text-blue-500 cursor-pointer transition-colors" size={20} />
+        <FaFacebook className="text-gray-500 hover:text-blue-600 cursor-pointer transition-colors" size={20} />
+        <FaInstagram className="text-gray-500 hover:text-pink-500 cursor-pointer transition-colors" size={20} />
+        <FaLinkedin className="text-gray-500 hover:text-blue-700 cursor-pointer transition-colors" size={20} />
+      </div>
+    </div>
+  </div>
+</footer>`,
+      component: (
+        <footer className="w-full rounded-lg bg-white py-8">
+          <div className="mx-auto max-w-6xl px-4">
+            <div className="flex flex-col items-center justify-between md:flex-row">
+              <div className="mb-4 md:mb-0">
+                <h3 className="mb-2 text-lg font-semibold text-gray-800">
+                  {language === 'en' ? 'Your Brand' : '您的品牌'}
+                </h3>
+                <p className="text-gray-600">
+                  &copy; 2024 {language === 'en' ? 'All rights reserved.' : '保留所有权利。'}
+                </p>
+              </div>
+              <div className="flex space-x-4">
+                <FaTwitter className="cursor-pointer text-gray-500 transition-colors hover:text-blue-500" size={20} />
+                <FaFacebook className="cursor-pointer text-gray-500 transition-colors hover:text-blue-600" size={20} />
+                <FaInstagram className="cursor-pointer text-gray-500 transition-colors hover:text-pink-500" size={20} />
+                <FaLinkedin className="cursor-pointer text-gray-500 transition-colors hover:text-blue-700" size={20} />
+              </div>
+            </div>
+          </div>
+        </footer>
+      ),
+    },
+    {
+      key: 'simple-links-footer',
+      title: language === 'en' ? 'Simple Links Footer' : '简单链接页脚',
+      code: `<footer className="w-full bg-white py-12">
+  <div className="max-w-6xl mx-auto px-4">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+      <div>
+        <h4 className="font-semibold text-gray-800 mb-4">Product</h4>
+        <ul className="space-y-2">
+          <li><a href="#" className="text-gray-600 hover:text-gray-800 transition-colors">Features</a></li>
+          <li><a href="#" className="text-gray-600 hover:text-gray-800 transition-colors">Pricing</a></li>
+          <li><a href="#" className="text-gray-600 hover:text-gray-800 transition-colors">Updates</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 className="font-semibold text-gray-800 mb-4">Company</h4>
+        <ul className="space-y-2">
+          <li><a href="#" className="text-gray-600 hover:text-gray-800 transition-colors">About</a></li>
+          <li><a href="#" className="text-gray-600 hover:text-gray-800 transition-colors">Blog</a></li>
+          <li><a href="#" className="text-gray-600 hover:text-gray-800 transition-colors">Careers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 className="font-semibold text-gray-800 mb-4">Support</h4>
+        <ul className="space-y-2">
+          <li><a href="#" className="text-gray-600 hover:text-gray-800 transition-colors">Help Center</a></li>
+          <li><a href="#" className="text-gray-600 hover:text-gray-800 transition-colors">Contact</a></li>
+          <li><a href="#" className="text-gray-600 hover:text-gray-800 transition-colors">Status</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 className="font-semibold text-gray-800 mb-4">Legal</h4>
+        <ul className="space-y-2">
+          <li><a href="#" className="text-gray-600 hover:text-gray-800 transition-colors">Privacy</a></li>
+          <li><a href="#" className="text-gray-600 hover:text-gray-800 transition-colors">Terms</a></li>
+          <li><a href="#" className="text-gray-600 hover:text-gray-800 transition-colors">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div className="border-t border-gray-200 pt-8">
+      <p className="text-center text-gray-600">&copy; 2024 Your Company. All rights reserved.</p>
+    </div>
+  </div>
+</footer>`,
+      component: (
+        <footer className="w-full bg-white py-12">
+          <div className="mx-auto max-w-6xl px-4">
+            <div className="mb-8 grid grid-cols-2 gap-8 md:grid-cols-4">
+              <div>
+                <h4 className="mb-4 font-semibold text-gray-800">{language === 'en' ? 'Product' : '产品'}</h4>
+                <ul className="space-y-2">
+                  <li>
+                    <a href="#" className="text-gray-600 transition-colors hover:text-gray-800">
+                      {language === 'en' ? 'Features' : '功能'}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-gray-600 transition-colors hover:text-gray-800">
+                      {language === 'en' ? 'Pricing' : '定价'}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-gray-600 transition-colors hover:text-gray-800">
+                      {language === 'en' ? 'Updates' : '更新'}
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="mb-4 font-semibold text-gray-800">{language === 'en' ? 'Company' : '公司'}</h4>
+                <ul className="space-y-2">
+                  <li>
+                    <a href="#" className="text-gray-600 transition-colors hover:text-gray-800">
+                      {language === 'en' ? 'About' : '关于'}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-gray-600 transition-colors hover:text-gray-800">
+                      {language === 'en' ? 'Blog' : '博客'}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-gray-600 transition-colors hover:text-gray-800">
+                      {language === 'en' ? 'Careers' : '职业'}
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="mb-4 font-semibold text-gray-800">{language === 'en' ? 'Support' : '支持'}</h4>
+                <ul className="space-y-2">
+                  <li>
+                    <a href="#" className="text-gray-600 transition-colors hover:text-gray-800">
+                      {language === 'en' ? 'Help Center' : '帮助中心'}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-gray-600 transition-colors hover:text-gray-800">
+                      {language === 'en' ? 'Contact' : '联系'}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-gray-600 transition-colors hover:text-gray-800">
+                      {language === 'en' ? 'Status' : '状态'}
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="mb-4 font-semibold text-gray-800">{language === 'en' ? 'Legal' : '法律'}</h4>
+                <ul className="space-y-2">
+                  <li>
+                    <a href="#" className="text-gray-600 transition-colors hover:text-gray-800">
+                      {language === 'en' ? 'Privacy' : '隐私'}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-gray-600 transition-colors hover:text-gray-800">
+                      {language === 'en' ? 'Terms' : '条款'}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-gray-600 transition-colors hover:text-gray-800">
+                      {language === 'en' ? 'Cookies' : 'Cookies'}
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="border-t border-gray-200 pt-8">
+              <p className="text-center text-gray-600">
+                &copy; 2024 {language === 'en' ? 'Your Company. All rights reserved.' : '您的公司。保留所有权利。'}
+              </p>
+            </div>
+          </div>
+        </footer>
+      ),
+    },
+    {
+      key: 'minimal-footer',
+      title: language === 'en' ? 'Minimal Footer' : '极简页脚',
+      code: `<footer className="w-full bg-gray-900 text-white py-6">
+  <div className="max-w-6xl mx-auto px-4">
+    <div className="flex flex-col sm:flex-row justify-between items-center">
+      <p className="text-gray-400 text-sm mb-2 sm:mb-0">
+        &copy; 2024 Brand. All rights reserved.
+      </p>
+      <div className="flex space-x-4 text-sm">
+        <a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy</a>
+        <a href="#" className="text-gray-400 hover:text-white transition-colors">Terms</a>
+        <a href="#" className="text-gray-400 hover:text-white transition-colors">Support</a>
+      </div>
+    </div>
+  </div>
+</footer>`,
+      component: (
+        <footer className="w-full rounded-lg bg-gray-900 py-6 text-white">
+          <div className="mx-auto max-w-6xl px-4">
+            <div className="flex flex-col items-center justify-between sm:flex-row">
+              <p className="mb-2 text-sm text-gray-400 sm:mb-0">
+                &copy; 2024 {language === 'en' ? 'Brand. All rights reserved.' : '品牌。保留所有权利。'}
+              </p>
+              <div className="flex space-x-4 text-sm">
+                <a href="#" className="text-gray-400 transition-colors hover:text-white">
+                  {language === 'en' ? 'Privacy' : '隐私'}
+                </a>
+                <a href="#" className="text-gray-400 transition-colors hover:text-white">
+                  {language === 'en' ? 'Terms' : '条款'}
+                </a>
+                <a href="#" className="text-gray-400 transition-colors hover:text-white">
+                  {language === 'en' ? 'Support' : '支持'}
+                </a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      ),
+    },
+    {
       key: 'newsletter-footer',
       title: language === 'en' ? 'Newsletter Subscription Footer' : '订阅通讯页脚',
-      code: `<footer className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-16">
+      code: `<footer className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-16">
   <div className="max-w-6xl mx-auto px-4">
     <div className="text-center mb-12">
       <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
@@ -108,7 +374,7 @@ export default function FootersDocPage() {
   </div>
 </footer>`,
       component: (
-        <footer className="rounded-lg bg-gradient-to-r from-emerald-600 to-teal-600 py-16 text-white">
+        <footer className="w-full rounded-lg bg-gradient-to-r from-emerald-600 to-teal-600 py-16 text-white">
           <div className="mx-auto max-w-6xl px-4">
             <div className="mb-12 text-center">
               <h2 className="mb-4 text-3xl font-bold">{language === 'en' ? 'Stay Updated' : '保持更新'}</h2>
@@ -190,7 +456,7 @@ export default function FootersDocPage() {
     {
       key: 'dark-modern-footer',
       title: language === 'en' ? 'Dark Modern Footer' : '深色现代页脚',
-      code: `<footer className="bg-gray-900 text-white py-16">
+      code: `<footer className="w-full rounded-lg bg-gray-900 text-white py-16">
   <div className="max-w-6xl mx-auto px-4">
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       <div className="lg:col-span-2">
@@ -281,7 +547,7 @@ export default function FootersDocPage() {
   </div>
 </footer>`,
       component: (
-        <footer className="rounded-lg bg-gray-900 py-16 text-white">
+        <footer className="w-full rounded-lg bg-gray-900 py-16 text-white">
           <div className="mx-auto max-w-6xl px-4">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
               <div className="lg:col-span-2">
@@ -324,25 +590,25 @@ export default function FootersDocPage() {
                 <ul className="space-y-3">
                   <li>
                     <a href="#" className="group flex items-center text-gray-400 transition-colors hover:text-white">
-                      <span className="mr-3 h-2 w-2 rounded-full bg-gray-400 group-hover:bg-blue-500 "></span>
+                      <span className="mr-3 h-2 w-2 rounded-full bg-gray-400 group-hover:bg-blue-500"></span>
                       {language === 'en' ? 'About Us' : '关于我们'}
                     </a>
                   </li>
                   <li>
                     <a href="#" className="group flex items-center text-gray-400 transition-colors hover:text-white">
-                      <span className="mr-3 h-2 w-2 rounded-full bg-gray-400 group-hover:bg-blue-500 "></span>
+                      <span className="mr-3 h-2 w-2 rounded-full bg-gray-400 group-hover:bg-blue-500"></span>
                       {language === 'en' ? 'Our Team' : '我们的团队'}
                     </a>
                   </li>
                   <li>
                     <a href="#" className="group flex items-center text-gray-400 transition-colors hover:text-white">
-                      <span className="mr-3 h-2 w-2 rounded-full bg-gray-400 group-hover:bg-blue-500 "></span>
+                      <span className="mr-3 h-2 w-2 rounded-full bg-gray-400 group-hover:bg-blue-500"></span>
                       {language === 'en' ? 'Careers' : '职业机会'}
                     </a>
                   </li>
                   <li>
                     <a href="#" className="group flex items-center text-gray-400 transition-colors hover:text-white">
-                      <span className="mr-3 h-2 w-2 rounded-full bg-gray-400 group-hover:bg-blue-500 "></span>
+                      <span className="mr-3 h-2 w-2 rounded-full bg-gray-400 group-hover:bg-blue-500"></span>
                       {language === 'en' ? 'News' : '新闻'}
                     </a>
                   </li>
@@ -353,25 +619,25 @@ export default function FootersDocPage() {
                 <ul className="space-y-3">
                   <li>
                     <a href="#" className="group flex items-center text-gray-400 transition-colors hover:text-white">
-                      <span className="mr-3 h-2 w-2 rounded-full bg-gray-400 group-hover:bg-purple-500 "></span>
+                      <span className="mr-3 h-2 w-2 rounded-full bg-gray-400 group-hover:bg-purple-500"></span>
                       {language === 'en' ? 'Documentation' : '文档'}
                     </a>
                   </li>
                   <li>
                     <a href="#" className="group flex items-center text-gray-400 transition-colors hover:text-white">
-                      <span className="mr-3 h-2 w-2 rounded-full bg-gray-400 group-hover:bg-purple-500 "></span>
+                      <span className="mr-3 h-2 w-2 rounded-full bg-gray-400 group-hover:bg-purple-500"></span>
                       {language === 'en' ? 'Help Center' : '帮助中心'}
                     </a>
                   </li>
                   <li>
                     <a href="#" className="group flex items-center text-gray-400 transition-colors hover:text-white">
-                      <span className="mr-3 h-2 w-2 rounded-full bg-gray-400 group-hover:bg-purple-500 "></span>
+                      <span className="mr-3 h-2 w-2 rounded-full bg-gray-400 group-hover:bg-purple-500"></span>
                       {language === 'en' ? 'Privacy Policy' : '隐私政策'}
                     </a>
                   </li>
                   <li>
                     <a href="#" className="group flex items-center text-gray-400 transition-colors hover:text-white">
-                      <span className="mr-3 h-2 w-2 rounded-full bg-gray-400 group-hover:bg-purple-500 "></span>
+                      <span className="mr-3 h-2 w-2 rounded-full bg-gray-400 group-hover:bg-purple-500"></span>
                       {language === 'en' ? 'Terms of Service' : '服务条款'}
                     </a>
                   </li>
@@ -396,7 +662,7 @@ export default function FootersDocPage() {
     {
       key: 'animated-wave-footer',
       title: language === 'en' ? 'Animated Wave Footer' : '动画波浪页脚',
-      code: `<footer className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-20 overflow-hidden">
+      code: `<footer className="relative w-full overflow-hidden bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-20">
   <div className="absolute inset-0">
     <svg className="absolute bottom-0 w-full h-20" viewBox="0 0 1200 120" preserveAspectRatio="none">
       <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" className="fill-white"></path>
@@ -465,7 +731,7 @@ export default function FootersDocPage() {
   </div>
 </footer>`,
       component: (
-        <footer className="relative overflow-hidden rounded-lg bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 py-20 text-white">
+        <footer className="relative w-full overflow-hidden bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 py-20 text-white">
           <div className="absolute inset-0">
             <svg className="absolute bottom-0 h-20 w-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
               <path
