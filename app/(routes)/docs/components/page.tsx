@@ -26,18 +26,18 @@ const componentsContent: ComponentsContent = {
     zh: 'UI 组件',
   },
   description: {
-    en: 'This page documents the main UI components used in Novel Xiaoshuo.',
-    zh: '本页面记录了 最爱小说网中使用的主要 UI 组件。',
+    en: 'This page documents the custom React components available in the component library.',
+    zh: '本页面记录了组件库中可用的自定义 React 组件。',
   },
   sections: {
     componentCategories: {
       title: {
-        en: 'Component Categories',
-        zh: '组件类别',
+        en: 'Available Components',
+        zh: '可用组件',
       },
       description: {
-        en: 'The application is built with several component categories:',
-        zh: '应用程序由以下几类组件构成：',
+        en: 'Reusable React components for common UI patterns:',
+        zh: '可复用的 React 组件用于常见 UI 模式：',
       },
       items: {
         en: [
@@ -55,13 +55,7 @@ const componentsContent: ComponentsContent = {
               </>
             ),
           },
-          {
-            description: (
-              <>
-                <strong>Book Components</strong>: Book-specific UI elements
-              </>
-            ),
-          },
+
           {
             description: (
               <>
@@ -99,13 +93,7 @@ const componentsContent: ComponentsContent = {
               </>
             ),
           },
-          {
-            description: (
-              <>
-                <strong>书籍组件</strong>: 书籍特定的 UI 元素
-              </>
-            ),
-          },
+
           {
             description: (
               <>
@@ -135,19 +123,19 @@ const componentsContent: ComponentsContent = {
 
 // Metadata for SEO and static generation
 export const metadata: Metadata = {
-  title: 'UI Components - Novel Xiaoshuo Documentation',
+  title: 'UI Components - UI-Academy Documentation',
   description:
-    'Documentation for the main UI components used in Novel Xiaoshuo application, including component categories, theme management, and interactive elements.',
-  keywords: ['UI Components', 'React', 'Next.js', 'Documentation', 'Novel Xiaoshuo', 'Components'],
+    'Documentation for the main UI components used in UI-Academy application, including component categories, theme management, and interactive elements.',
+  keywords: ['UI Components', 'React', 'Next.js', 'Documentation', 'UI-Academy', 'Components'],
   openGraph: {
     title: 'UI Components Documentation',
-    description: 'Complete guide to UI components in Novel Xiaoshuo',
+    description: 'Complete guide to UI components in UI-Academy',
     type: 'article',
   },
   twitter: {
     card: 'summary',
     title: 'UI Components Documentation',
-    description: 'Complete guide to UI components in Novel Xiaoshuo',
+    description: 'Complete guide to UI components in UI-Academy',
   },
 };
 

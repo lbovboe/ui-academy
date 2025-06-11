@@ -43,11 +43,11 @@ const sections = [
 
 // Metadata for SEO and static generation
 export const metadata: Metadata = {
-  title: 'Documentation - React Component Library',
+  title: 'UI-Academy',
   description: 'Comprehensive documentation for a reusable React component library with pre-built UI components, context providers, and utility functions. Fully typed with TypeScript and styled with Tailwind CSS.',
   keywords: ['React', 'TypeScript', 'Components', 'Documentation', 'UI Library'],
   openGraph: {
-    title: 'Documentation - React Component Library',
+    title: 'UI-Academy',
     description: 'Comprehensive documentation for a reusable React component library',
     type: 'website',
   },

@@ -16,15 +16,15 @@ export default function ContextPage() {
     title: language === 'en' ? 'Context' : '上下文',
     description:
       language === 'en'
-        ? 'This page documents the main React Contexts used in Novel Xiaoshuo.'
-        : '本页面记录了最爱小说网中使用的主要 React 上下文（Context）。',
+        ? 'This page documents the custom React Context available in the component library.'
+        : '本页面记录了组件库中可用的自定义 React 上下文。',
     sections: {
       contextCategories: {
-        title: language === 'en' ? 'Context Categories' : '上下文类别',
+        title: language === 'en' ? 'Available Contexts' : '可用上下文',
         description:
           language === 'en'
-            ? 'The application uses several React Contexts to manage global state:'
-            : '应用程序使用多个 React 上下文来管理全局状态：',
+            ? 'Reusable React Contexts to manage global state:'
+            : '可复用的 React 上下文来管理全局状态：',
         items: [
           {
             description:
