@@ -78,6 +78,14 @@ const navItems: NavItem[] = [
         href: '/docs/components/basic-buttons',
         icon: <FaCode className="text-doc_icon-light dark:text-doc_icon-dark" />,
       },
+      {
+        label: {
+          en: 'Animate Buttons',
+          zh: '动画按钮',
+        },
+        href: '/docs/components/animate-buttons',
+        icon: <FaCode className="text-doc_icon-light dark:text-doc_icon-dark" />,
+      },
     ],
   },
   {
