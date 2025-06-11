@@ -73,29 +73,12 @@ const Home = async () => {
       </section>
       <div className="flex flex-wrap justify-center gap-4">
         <Link
-          href="/docs/getting-started"
+          href="/docs/"
           className="bg-light-primary hover:bg-light-secondary dark:bg-dark-primary dark:hover:bg-dark-secondary rounded px-6 py-2 font-semibold text-white shadow transition-colors"
         >
           Get Started
         </Link>
-        <Link
-          href="/components"
-          className="border-light-primary text-light-primary hover:bg-light-background dark:border-dark-primary dark:text-dark-primary dark:hover:bg-dark-background rounded border px-6 py-2 font-semibold transition-colors"
-        >
-          Browse Components
-        </Link>
-        <Link
-          href="/docs/changelog"
-          className="border-light-primary text-light-primary hover:bg-light-background dark:border-dark-primary dark:text-dark-primary dark:hover:bg-dark-background rounded border px-6 py-2 font-semibold transition-colors"
-        >
-          Changelog
-        </Link>
-        <Link
-          href="/docs/about"
-          className="border-light-primary text-light-primary hover:bg-light-background dark:border-dark-primary dark:text-dark-primary dark:hover:bg-dark-background rounded border px-6 py-2 font-semibold transition-colors"
-        >
-          About
-        </Link>
+       
       </div>
     </main>
   );
