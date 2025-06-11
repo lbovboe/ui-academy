@@ -29,12 +29,24 @@ const sections = [
   },
   {
     title: {
+      en: 'Custom Hooks',
+      zh: '自定义 Hook',
+    },
+    description: {
+      en: 'Reusable custom React hooks for state management, API calls, and common UI patterns.',
+      zh: '用于状态管理、API 调用和常见 UI 模式的可复用自定义 React Hook。',
+    },
+    href: '/docs/hooks',
+    icon: 'FaFish',
+  },
+  {
+    title: {
       en: 'Utility Functions',
       zh: '工具函数',
     },
     description: {
-      en: 'Helper functions and custom hooks for common development tasks, fully typed and reusable.',
-      zh: '用于常见开发任务的辅助函数和自定义 Hook，完全类型化且可复用。',
+      en: 'Helper functions and utility methods for common development tasks, fully typed and reusable.',
+      zh: '用于常见开发任务的辅助函数和工具方法，完全类型化且可复用。',
     },
     href: '/docs/utilities',
     icon: 'FaTools',
@@ -44,8 +56,8 @@ const sections = [
 // Metadata for SEO and static generation
 export const metadata: Metadata = {
   title: 'UI-Academy',
-  description: 'Comprehensive documentation for a reusable React component library with pre-built UI components, context providers, and utility functions. Fully typed with TypeScript and styled with Tailwind CSS.',
-  keywords: ['React', 'TypeScript', 'Components', 'Documentation', 'UI Library'],
+  description: 'Comprehensive documentation for a reusable React component library with pre-built UI components, context providers, custom hooks, and utility functions. Fully typed with TypeScript and styled with Tailwind CSS.',
+  keywords: ['React', 'TypeScript', 'Components', 'Hooks', 'Documentation', 'UI Library'],
   openGraph: {
     title: 'UI-Academy',
     description: 'Comprehensive documentation for a reusable React component library',
@@ -57,13 +69,13 @@ export const metadata: Metadata = {
 const pageContent = {
   en: {
     title: 'Documentation',
-    description: 'This site provides comprehensive documentation for a reusable React component library, including pre-built UI components, context providers, and utility functions. All resources are fully typed with TypeScript and styled with Tailwind CSS to accelerate development and ensure consistency across projects.',
+    description: 'This site provides comprehensive documentation for a reusable React component library, including pre-built UI components, context providers, custom hooks, and utility functions. All resources are fully typed with TypeScript and styled with Tailwind CSS to accelerate development and ensure consistency across projects.',
     keyFeatures: 'Key Features',
     docSections: 'Documentation Sections',
   },
   zh: {
     title: '文档',
-    description: '本网站为可复用的 React 组件库提供全面文档，包括预构建的 UI 组件、上下文提供者和工具函数。所有资源均采用 TypeScript 完全类型化，并使用 Tailwind CSS 样式，助力项目开发提速并保持一致性。',
+    description: '本网站为可复用的 React 组件库提供全面文档，包括预构建的 UI 组件、上下文提供者、自定义 Hook 和工具函数。所有资源均采用 TypeScript 完全类型化，并使用 Tailwind CSS 样式，助力项目开发提速并保持一致性。',
     keyFeatures: '主要功能',
     docSections: '文档部分',
   },

@@ -1,6 +1,6 @@
 'use client';
 
-import { FaBook, FaTools, FaCogs, FaCode } from 'react-icons/fa';
+import { FaBook, FaTools, FaCogs, FaCode, FaFish } from 'react-icons/fa';
 import DocsWrapper from '@/app/components/docs/DocsWrapper';
 import DocLayout from '@/app/components/docs/DocLayout';
 import DocFeatureCard from '@/app/components/docs/DocFeatureCard';
@@ -47,6 +47,7 @@ const iconMap: Record<string, IconType> = {
   FaTools,
   FaCogs,
   FaCode,
+  FaFish,
 };
 
 // Client Component

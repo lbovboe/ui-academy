@@ -44,36 +44,7 @@ const componentsContent: ComponentsContent = {
           {
             description: (
               <>
-                <strong>UI Components</strong>: Generic UI elements
-              </>
-            ),
-          },
-          {
-            description: (
-              <>
-                <strong>Headers</strong>: Navigation and header components
-              </>
-            ),
-          },
-
-          {
-            description: (
-              <>
-                <strong>Footer</strong>: Footer components
-              </>
-            ),
-          },
-          {
-            description: (
-              <>
-                <strong>Animation</strong>: Animation-related components
-              </>
-            ),
-          },
-          {
-            description: (
-              <>
-                <strong>Tools</strong>: Utility UI components
+                <strong>Basic Buttons</strong>: Generic Button Components
               </>
             ),
           },
@@ -82,36 +53,7 @@ const componentsContent: ComponentsContent = {
           {
             description: (
               <>
-                <strong>UI 组件</strong>: 通用 UI 元素
-              </>
-            ),
-          },
-          {
-            description: (
-              <>
-                <strong>页眉</strong>: 导航和页头组件
-              </>
-            ),
-          },
-
-          {
-            description: (
-              <>
-                <strong>页脚</strong>: 页脚组件
-              </>
-            ),
-          },
-          {
-            description: (
-              <>
-                <strong>动画</strong>: 动画相关组件
-              </>
-            ),
-          },
-          {
-            description: (
-              <>
-                <strong>工具</strong>: 实用工具组件
+                <strong>基础按钮</strong>: 通用按钮组件
               </>
             ),
           },
