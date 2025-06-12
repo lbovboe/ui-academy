@@ -106,7 +106,7 @@ const HomeClient = () => {
           <div className="animate-fade-in-up mt-20 delay-2500">
             <div className="flex items-center justify-center gap-4 text-slate-400">
               <div className="h-px w-20 bg-gradient-to-r from-transparent to-slate-400"></div>
-              <span className="text-sm font-medium">TypeScript • React • Tailwind CSS</span>
+              <span className="text-sm font-medium">TypeScript • React • Next.js • Tailwind CSS</span>
               <div className="h-px w-20 bg-gradient-to-l from-transparent to-slate-400"></div>
             </div>
           </div>
