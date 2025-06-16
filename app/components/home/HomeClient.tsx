@@ -84,7 +84,7 @@ const HomeClient = () => {
           {/* CTA Button */}
           <div className="animate-fade-in-up mt-16 delay-2000">
             <Link
-              href="/docs/"
+              href="/docs/components/basic-buttons"
               className="group relative inline-flex items-center gap-3 rounded-2xl bg-gradient-to-r from-purple-600 to-blue-600 px-12 py-6 text-xl font-bold text-white shadow-2xl transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:from-purple-500 hover:to-blue-500 hover:shadow-purple-500/25"
             >
               <span className="relative z-10">Get Started</span>
